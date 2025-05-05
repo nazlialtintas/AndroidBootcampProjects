@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainpage_navigation"
+    app:startDestination="@id/anasayfa">
+
+    <fragment
+        android:id="@+id/sayfa_A"
+        android:name="com.example.odev4.Sayfa_A"
+        android:label="fragment_sayfa__a"
+        tools:layout="@layout/fragment_sayfa__a" >
+        <action
+            android:id="@+id/action_sayfa_A_to_sayfa_B"
+            app:destination="@id/sayfa_B" />
+    </fragment>
+    <fragment
+        android:id="@+id/sayfa_B"
+        android:name="com.example.odev4.Sayfa_B"
+        android:label="fragment_sayfa__b"
+        tools:layout="@layout/fragment_sayfa__b" >
+        <action
+            android:id="@+id/action_sayfa_B_to_sayfa_Y"
+            app:destination="@id/sayfa_Y"
+            app:popUpTo="@id/sayfa_A"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/sayfa_X"
+        android:name="com.example.odev4.Sayfa_X"
+        android:label="fragment_sayfa__x"
+        tools:layout="@layout/fragment_sayfa__x" >
+        <action
+            android:id="@+id/action_sayfa_X_to_sayfa_Y"
+            app:destination="@id/sayfa_Y"
+            app:popUpTo="@id/sayfa_X"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/sayfa_Y"
+        android:name="com.example.odev4.Sayfa_Y"
+        android:label="fragment_sayfa__y"
+        tools:layout="@layout/fragment_sayfa__y" />
+    <fragment
+        android:id="@+id/anasayfa"
+        android:name="com.example.odev4.Anasayfa"
+        android:label="fragment_anasayfa"
+        tools:layout="@layout/fragment_anasayfa" >
+        <action
+            android:id="@+id/action_anasayfa_to_sayfa_X"
+            app:destination="@id/sayfa_X" />
+        <action
+            android:id="@+id/action_anasayfa_to_sayfa_A"
+            app:destination="@id/sayfa_A" />
+    </fragment>
+</navigation>

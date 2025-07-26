@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="numberkeys">#A0A0E6</color>
+    <color name="functionalkeys">#6867F0</color>
+    <color name="deletekey">#A349A4</color>
+    <color name="resultkey">#8967F0</color>
+</resources>
